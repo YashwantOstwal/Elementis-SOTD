@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+::-moz-selection {
+  background: #ced1bf;
+  color: #2b3530;
+}
+
+::selection {
+  background: #ced1bf;
+  color: #2b3530;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+  font-family: var(--font-grotesque), sans-serif;
+}
+@layer base {
+  :root {
+    --multiplier: calc(100vw / 375);
+    --basesvh: 812;
+  }
+  @media only screen and (min-width: 768px) {
+    :root {
+      --multiplier: calc(100vw / 1440);
+    }
+  }
+}
+@theme {
+  /* text utilities */
+  --text-*: initial;
+  --text-2xs: calc(12 * var(--multiplier));
+  --text-xs: calc(13 * var(--multiplier));
+  --text-sm: calc(14 * var(--multiplier));
+  --text-base: calc(16 * var(--multiplier));
+  --text-lg: calc(18 * var(--multiplier));
+  --text-xl: calc(20 * var(--multiplier));
+  --text-24: calc(24 * var(--multiplier));
+  --text-26: calc(26 * var(--multiplier));
+  --text-28: calc(28 * var(--multiplier));
+  --text-30: calc(30 * var(--multiplier));
+  --text-40: calc(40 * var(--multiplier));
+  --text-144: calc(144 * var(--multiplier));
+
+  --text-1600svh: calc(1600svh / var(--basesvh));
+  --text-3000svh: calc(3000svh / var(--basesvh));
+  --text-1800svh: calc(1800svh / var(--basesvh));
+
+  --spacing-0: 0;
+  --spacing-px: 1px;
+
+  --spacing-1: calc(4 * var(--multiplier));
+  --spacing-1-75: calc(7 * var(--multiplier));
+  --spacing-2: calc(8 * var(--multiplier));
+  --spacing-2-5: calc(10 * var(--multiplier));
+  --spacing-3: calc(12 * var(--multiplier));
+  --spacing-3-5: calc(14 * var(--multiplier));
+  --spacing-3-75: calc(15 * var(--multiplier));
+  --spacing-4: calc(16 * var(--multiplier));
+  --spacing-4-5: calc(18 * var(--multiplier));
+  --spacing-5: calc(20 * var(--multiplier));
+  --spacing-5-75: calc(23 * var(--multiplier));
+  --spacing-6: calc(24 * var(--multiplier));
+  --spacing-6-5: calc(26 * var(--multiplier));
+  --spacing-7: calc(28 * var(--multiplier));
+  --spacing-7-5: calc(30 * var(--multiplier));
+  --spacing-8: calc(32 * var(--multiplier));
+  --spacing-8-25: calc(33 * var(--multiplier));
+  --spacing-8-75: calc(35 * var(--multiplier));
+  --spacing-10: calc(40 * var(--multiplier));
+  --spacing-12: calc(48 * var(--multiplier));
+  --spacing-14: calc(56 * var(--multiplier));
+  --spacing-15: calc(60 * var(--multiplier));
+  --spacing-16: calc(64 * var(--multiplier));
+  --spacing-17-5: calc(70 * var(--multiplier));
+  --spacing-18: calc(72 * var(--multiplier));
+  --spacing-20: calc(80 * var(--multiplier));
+  --spacing-23: calc(92 * var(--multiplier));
+  --spacing-24: calc(96 * var(--multiplier));
+  --spacing-26: calc(104 * var(--multiplier));
+  --spacing-28: calc(112 * var(--multiplier));
+  --spacing-28-75: calc(115 * var(--multiplier));
+  --spacing-32: calc(128 * var(--multiplier));
+  --spacing-35: calc(140 * var(--multiplier));
+  --spacing-36: calc(144 * var(--multiplier));
+  --spacing-37-5: calc(150 * var(--multiplier));
+  --spacing-38: calc(152 * var(--multiplier));
+  --spacing-42-5: calc(170 * var(--multiplier));
+  --spacing-48: calc(182 * var(--multiplier));
+  /* wrong amth */
+  --spacing-50: calc(200 * var(--multiplier));
+  --spacing-53-75: calc(215 * var(--multiplier));
+  --spacing-56-25: calc(225 * var(--multiplier));
+  --spacing-60: calc(240 * var(--multiplier));
+  --spacing-64: calc(256 * var(--multiplier));
+  --spacing-102: calc(408 * var(--multiplier));
+  --spacing-118: calc(472 * var(--multiplier));
+  --spacing-172: calc(688 * var(--multiplier));
+  --spacing-2000svh: calc(2000svh / var(--basesvh));
+  --spacing-2400svh: calc(2400svh / var(--basesvh));
+  --spacing-3500svh: calc(3500svh / var(--basesvh));
+  --spacing-5600svh: calc(5600svh / var(--basesvh));
+  --spacing-6400svh: calc(6400svh / var(--basesvh));
+  --spacing-7000svh: calc(7000svh / var(--basesvh));
+  --spacing-8000svh: calc(8000svh / var(--basesvh));
+}
