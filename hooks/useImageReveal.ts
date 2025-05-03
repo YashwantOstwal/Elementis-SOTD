@@ -1,7 +1,7 @@
 import { useAnimate } from "motion/react";
 import { useCallback, useRef } from "react";
 
-export default function useHomework1() {
+export function useImageReveal() {
   const [imgContainerRef, animate] = useAnimate();
   const focus = useRef(0);
   const zIndex = useRef(1);

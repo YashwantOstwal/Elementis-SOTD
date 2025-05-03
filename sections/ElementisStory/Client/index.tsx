@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Picture1 from "@/public/elementis-stories/picture-1.png";
 import Picture2 from "@/public/elementis-stories/picture-2.png";
-import FinalParallax from "@/components/Client/FinalParallax";
+import ParallaxContainer from "@/components/Client/ParallaxContainer";
 import { useIsMobile } from "@/app/providers";
 
 export default function ElementisStoryClient() {
@@ -31,14 +31,14 @@ export default function ElementisStoryClient() {
       ) : (
         <>
           <div className="col-span-3 row-span-2">
-            <FinalParallax parallaxAmount={10}>
+            <ParallaxContainer parallaxAmount={10}>
               <Image src={Picture1} alt="picture-1" className="h-auto w-full" />
-            </FinalParallax>
+            </ParallaxContainer>
           </div>
           <div className="col-span-6 col-start-6 row-start-2">
-            <FinalParallax parallaxAmount={25}>
+            <ParallaxContainer parallaxAmount={25}>
               <Image src={Picture2} alt="picture-2" className="h-auto w-full" />
-            </FinalParallax>
+            </ParallaxContainer>
           </div>
         </>
       )}

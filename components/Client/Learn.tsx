@@ -14,10 +14,10 @@ import {
   useTransform,
 } from "motion/react";
 import ClipImageCard from "./ClipImageCard";
-import useMaskImage from "@/utils/hooks/useMaskImage";
-import CustomCursor from "./CustomCursor2";
-import useCustomCursor from "@/utils/hooks/useCustomCursor";
-import NavigateSVG from "../SVGComponents/NavigateSVG";
+import useMaskImage from "@/hooks/useMaskImage";
+import CustomCursor from "./Cursor";
+import { useCursor } from "@/hooks/useCursor";
+import NavigateSVG from "@/components/SVGComponents/NavigateSVG";
 import { useRouter } from "next/navigation";
 import { cubicBezier } from "motion";
 import { useIsMobile } from "@/app/providers";
@@ -26,7 +26,7 @@ export default function Learn() {
   const router = useRouter();
   const [state, setState] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
-  const { handlers, cursorProps } = useCustomCursor();
+  const { handlers, cursorProps } = useCursor();
 
   const { scrollYProgress: parentProgress } = useScroll({
     target: ref,

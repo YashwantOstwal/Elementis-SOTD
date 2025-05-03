@@ -1,6 +1,6 @@
 import Image from "next/image";
 import FormImage from "@/public/FormImage.png";
-import FinalParallax from "@/components/Client/FinalParallax";
+import ParallaxContainer from "@/components/Client/ParallaxContainer";
 import Input from "@/components/Server/Input";
 import Checkbox from "@/components/Client/Checkbox";
 import Form from "next/form";
@@ -10,7 +10,7 @@ import Link from "next/link";
 import * as motion from "motion/react-client";
 import NavigateSVG from "@/components/SVGComponents/NavigateSVG";
 
-export default function SignUpForm() {
+export default function FormServer() {
   const categories = [
     "Resorts and Residences",
     "Retreats",
@@ -21,9 +21,9 @@ export default function SignUpForm() {
 
   return (
     <div className="flex flex-col bg-[#CED1BF] md:grid md:grid-cols-2">
-      <FinalParallax parallaxAmount={25}>
+      <ParallaxContainer parallaxAmount={25}>
         <Image src={FormImage} alt="form-image" className="h-auto w-full" />
-      </FinalParallax>
+      </ParallaxContainer>
       <div className="col-start-2 flex flex-col items-center justify-center">
         <Form action={""} className="w-full max-w-102 px-5 py-24 md:p-0">
           <div className="w-full text-xl font-light md:text-30">

@@ -1,10 +1,10 @@
 import React from "react";
-import MaskText from "./MaskText";
-import NavigateSVG from "../SVGComponents/NavigateSVG";
-import Br from "./Br";
-import ResponsiveMarquee from "../Client/ResponsiveMarquee";
+import MaskText from "@/components/Server/MaskText";
+import NavigateSVG from "@/components/SVGComponents/NavigateSVG";
+import Br from "@/components/Server/Br";
+import ResponsiveMarquee from "@/components/Client/ResponsiveMarquee";
 
-export default function HeroFooter() {
+export default function HeroServer() {
   return (
     <div className="pointer-events-none flex h-screen flex-col justify-end gap-8">
       <MaskText

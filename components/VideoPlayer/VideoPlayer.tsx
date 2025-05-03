@@ -1,9 +1,9 @@
 "use client";
 import React, { Dispatch, SetStateAction, useRef } from "react";
 import { AnimatePresence, motion, useSpring, useTransform } from "motion/react";
-import FullScreenIcon from "../SVGComponents/FullScreenIcon";
+import FullScreenIcon from "@/components/SVGComponents/FullScreenIcon";
 
-interface CustomVideoPlayerProps {
+interface VideoPlayerProps {
   setPlayIntro: Dispatch<SetStateAction<boolean>>;
   playIntro: boolean;
   handlers?: {
@@ -12,11 +12,11 @@ interface CustomVideoPlayerProps {
     onMouseMove: (e: React.MouseEvent<HTMLDivElement>) => void;
   };
 }
-export default function CustomVideoPlayer({
+export default function VideoPlayer({
   setPlayIntro,
   playIntro,
   handlers,
-}: CustomVideoPlayerProps) {
+}: VideoPlayerProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const videoProgress = useSpring(0, { mass: 1, damping: 30, stiffness: 100 });
   const width = useTransform(videoProgress, (latest) => {

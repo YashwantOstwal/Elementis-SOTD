@@ -2,15 +2,15 @@
 
 import { useIsMobile } from "@/app/providers";
 import { ReactNode } from "react";
-import FinalParallax from "./FinalParallax";
-
+import ParallaxContainer from "@/components/Client/ParallaxContainer";
+interface ResponsiveImageProps {
+  children: ReactNode;
+  parallaxAmount: number;
+}
 export default function ResponsiveImage({
   children,
   parallaxAmount,
-}: {
-  children: ReactNode;
-  parallaxAmount: number;
-}) {
+}: ResponsiveImageProps) {
   const isMobile = useIsMobile();
 
   return (
@@ -18,9 +18,9 @@ export default function ResponsiveImage({
       {isMobile ? (
         children
       ) : (
-        <FinalParallax parallaxAmount={parallaxAmount}>
+        <ParallaxContainer parallaxAmount={parallaxAmount}>
           {children}
-        </FinalParallax>
+        </ParallaxContainer>
       )}
     </>
   );

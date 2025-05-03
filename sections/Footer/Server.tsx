@@ -1,8 +1,8 @@
-import LogoFull from "../SVGComponents/LogoFull";
+import LogoFull from "../../components/SVGComponents/LogoFull";
 import DashedLink from "@/components/Server/DashedLink";
-import StayConnected from "./StayConnected";
+import StayConnected from "../../components/Server/StayConnected";
 import Link from "next/link";
-import ContactUs from "./ContactUs";
+import ContactUs from "../../components/Server/ContactUs";
 
 interface LinkItem {
   href: string;

@@ -3,9 +3,9 @@
 import { Dispatch, SetStateAction } from "react";
 import { motion } from "motion/react";
 import Image, { StaticImageData } from "next/image";
-import CustomLink from "../Server/CustomLink";
-import DashedLink from "../Server/DashedLink";
-import CrossIcon from "../SVGComponents/CrossIcon";
+import CustomLink from "@/components/Server/CustomLink";
+import DashedLink from "@/components/Server/DashedLink";
+import CrossIcon from "@/components/SVGComponents/CloseIcon";
 import Home from "@/public/SideBar/home.png";
 import Destinations from "@/public/SideBar/destination.png";
 import Wellness from "@/public/SideBar/wellness.png";
@@ -16,8 +16,8 @@ import TheStory from "@/public/SideBar/the-story.png";
 import NewDevelopments from "@/public/SideBar/new-developments.png";
 import PressRoom from "@/public/SideBar/press-room.png";
 import Careers from "@/public/SideBar/careers.png";
-import useHomework1 from "@/utils/hooks/useHomework1";
-import StayConnected from "../Server/StayConnected";
+import { useImageReveal } from "@/hooks/useImageReveal";
+import StayConnected from "@/components//Server/StayConnected";
 import Link from "next/link";
 
 interface LinkItem {
@@ -30,7 +30,7 @@ interface SideBarProps {
   setOpenSideBar: Dispatch<SetStateAction<boolean>>;
 }
 export default function SideBar({ setOpenSideBar }: SideBarProps) {
-  const { imgContainerRef, handleFocus } = useHomework1();
+  const { imgContainerRef, handleFocus } = useImageReveal();
   const data: LinkItem[] = [
     { href: "https://elementis.co/", link: "Home", src: Home },
     {

@@ -1,50 +1,9 @@
-"use client";
-import Image, { StaticImageData } from "next/image";
-import { motion } from "motion/react";
-import StyledLink2 from "@/components/Client/StyledLink2";
-import Image1 from "@/public/group/discover-elementis.png";
-import Image2 from "@/public/group/our-vision-and-mission.png";
-import Image3 from "@/public/group/our-commitment.png";
-import Image4 from "@/public/group/our-pillars.png";
-import Image5 from "@/public/group/sustainability.png";
+import { Fragment } from "react";
 import ResponsiveMaskTextVariant from "@/components/Client/ResponsiveMaskTextVariant";
-import useHomework1 from "@/utils/hooks/useHomework1";
 import ResponsiveMarquee from "@/components/Client/ResponsiveMarquee";
-interface LinkType {
-  title: string;
-  href: string;
-  img: StaticImageData;
-}
-export default function SustainableRetreat() {
-  const { imgContainerRef, handleFocus } = useHomework1();
+import SustainableRetreatClient from "@/components/Client/SustainableRetreatClient";
 
-  const links: LinkType[] = [
-    {
-      title: "ELEMENTIS Story",
-      href: "https://elementis.co/the-story",
-      img: Image1,
-    },
-    {
-      title: "Our Vision & Mission",
-      href: "https://elementis.co/sustainability#mission-vision",
-      img: Image2,
-    },
-    {
-      title: "Our Commitment",
-      href: "https://elementis.co/sustainability#our-comitment",
-      img: Image3,
-    },
-    {
-      title: "Our Pillars",
-      href: "https://elementis.co/sustainability#our-pillars",
-      img: Image4,
-    },
-    {
-      title: "Sustainability",
-      href: "https://elementis.co/sustainability",
-      img: Image5,
-    },
-  ];
+export default function SustainableRetreat() {
   return (
     <div className="bg-[#30493D] py-36 text-[#D1CCBF] md:py-60">
       <ResponsiveMarquee
@@ -66,80 +25,82 @@ export default function SustainableRetreat() {
         <div className="flex flex-col gap-14 md:col-span-2 md:col-start-2 md:flex-row">
           <ResponsiveMaskTextVariant
             desktop={[
-              <>At our Resorts and Residences, we believe in</>,
-              <>fostering a sense of partnership, building a</>,
-              <>thriving ecosystem, nurturing a strong</>,
-              <>Community, and prioritizing the health of the</>,
-              <>planet. These values shape every aspect of</>,
-              <>your personalized Wellness experience.</>,
+              <Fragment key="d-0">
+                At our Resorts and Residences, we believe in
+              </Fragment>,
+              <Fragment key="d-1">
+                fostering a sense of partnership, building a
+              </Fragment>,
+              <Fragment key="d-2">
+                thriving ecosystem, nurturing a strong
+              </Fragment>,
+              <Fragment key="d-3">
+                Community, and prioritizing the health of the
+              </Fragment>,
+              <Fragment key="d-4">
+                planet. These values shape every aspect of
+              </Fragment>,
+              <Fragment key="d-5">
+                your personalized Wellness experience.
+              </Fragment>,
             ]}
             mobile={[
-              <>At our Resorts and Residences, we believe</>,
-              <>in fostering a sense of partnership,</>,
-              <>building a thriving ecosystem, nurturing a</>,
-              <>strong Community, and prioritizing the</>,
-              <>health of the planet. These values shape</>,
-              <>every aspect of your personalized</>,
-              <>Wellness experience.</>,
+              <Fragment key="m-0">
+                At our Resorts and Residences, we believe
+              </Fragment>,
+              <Fragment key="m-1">
+                in fostering a sense of partnership,
+              </Fragment>,
+              <Fragment key="m-2">
+                building a thriving ecosystem, nurturing a
+              </Fragment>,
+              <Fragment key="m-3">
+                strong Community, and prioritizing the
+              </Fragment>,
+              <Fragment key="m-4">
+                health of the planet. These values shape
+              </Fragment>,
+              <Fragment key="m-5">every aspect of your personalized</Fragment>,
+              <Fragment key="m-6">Wellness experience.</Fragment>,
             ]}
             className="text-base [line-height:1.33] md:text-lg"
           />
+
           <ResponsiveMaskTextVariant
             desktop={[
-              <>We envision a world where mind, body, and</>,
-              <>spirit thrive in harmony, fostering</>,
-              <>connections to each other and the natural</>,
-              <>world, redefining the concept of fulfillment</>,
-              <>beyond material success.</>,
+              <Fragment key="d2-0">
+                We envision a world where mind, body, and
+              </Fragment>,
+              <Fragment key="d2-1">
+                spirit thrive in harmony, fostering
+              </Fragment>,
+              <Fragment key="d2-2">
+                connections to each other and the natural
+              </Fragment>,
+              <Fragment key="d2-3">
+                world, redefining the concept of fulfillment
+              </Fragment>,
+              <Fragment key="d2-4">beyond material success.</Fragment>,
             ]}
             mobile={[
-              <>We envision a world where mind, body,</>,
-              <>and spirit thrive in harmony, fostering</>,
-              <>connections to each other and the natural</>,
-              <>world, redefining the concept of fulfillment</>,
-              <>beyond material success.</>,
+              <Fragment key="m2-0">
+                We envision a world where mind, body,
+              </Fragment>,
+              <Fragment key="m2-1">
+                and spirit thrive in harmony, fostering
+              </Fragment>,
+              <Fragment key="m2-2">
+                connections to each other and the natural
+              </Fragment>,
+              <Fragment key="m2-3">
+                world, redefining the concept of fulfillment
+              </Fragment>,
+              <Fragment key="m2-4">beyond material success.</Fragment>,
             ]}
             className="text-base [line-height:1.33] md:text-lg"
           />
         </div>
-
-        <div
-          ref={imgContainerRef}
-          className="relative overflow-hidden md:w-fit"
-        >
-          <Image
-            src={links[links.length - 1].img}
-            alt="placeholder"
-            aria-hidden={true}
-            className="invisible w-full max-md:aspect-[0.82] md:h-full md:w-auto"
-          />
-          {links.map((eachLink, i) => (
-            <motion.div
-              key={`image-${i + 1}`}
-              data-index={i}
-              className="absolute inset-0"
-              style={{ zIndex: -i }}
-            >
-              <Image
-                src={eachLink.img}
-                alt={eachLink.title}
-                className="size-full object-cover md:w-auto"
-              />
-            </motion.div>
-          ))}
-        </div>
-        <div className="-mx-8-25 grid grid-rows-5 divide-y divide-[#D1CCBF] border-y border-[#D1CCBF] md:col-span-2 md:col-start-2 md:row-start-2 md:mx-0">
-          {links.map((eachLink, index) => (
-            <StyledLink2
-              handleFocus={handleFocus}
-              sNo={index + 1}
-              href={eachLink.href}
-              key={`link-${index + 1}`}
-            >
-              {eachLink.title}
-            </StyledLink2>
-          ))}
-        </div>
+        <SustainableRetreatClient />
       </div>
     </div>
   );

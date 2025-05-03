@@ -2,20 +2,19 @@
 import cn from "@/utils/cn";
 import { AnimatePresence, motion, MotionStyle } from "motion/react";
 import { PropsWithChildren, useId } from "react";
-interface CustomCursorProps extends PropsWithChildren {
+interface CursorProps extends PropsWithChildren {
   renderCursor: boolean;
   style?: MotionStyle;
-  onAnimationComplete?: () => void;
   isMobile?: boolean;
   className?: string;
 }
-export default function CustomCursor2({
+export default function Cursor({
   renderCursor,
   children,
   className,
   isMobile = false,
   ...rest
-}: CustomCursorProps) {
+}: CursorProps) {
   const id = useId();
   const variants = {
     initial: { scale: 0 },

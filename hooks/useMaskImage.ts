@@ -2,11 +2,14 @@ import { MotionValue, useTransform } from "motion/react";
 export default function useMaskImage(
   localProgress: MotionValue<number>,
   isMobile: boolean | null,
+  config?: {
+    divisions: number;
+    inset: number;
+    gap: number;
+    vh: number;
+  },
 ) {
-  const divisions = 28,
-    inset = 0,
-    gap = 0.35,
-    vh = 130;
+  const { divisions = 28, inset = 0, gap = 0.35, vh = 130 } = config ?? {};
   const func = (i: number, latest: number) => {
     const buffer = (1 - 2 * inset - gap) / (divisions - 1);
     if (inset + i * buffer > latest) return 0;

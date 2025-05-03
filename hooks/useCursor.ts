@@ -7,7 +7,7 @@ import {
 } from "motion/react";
 import { useRef, useState } from "react";
 
-export default function useCustomCursor() {
+export function useCursor() {
   const [renderCursor, setRenderCursor] = useState(false);
   const velocitySensitive = useRef(false);
   const top = useSpring(0, { damping: 110, stiffness: 550 });

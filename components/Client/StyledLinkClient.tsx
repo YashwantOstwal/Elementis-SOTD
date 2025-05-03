@@ -5,7 +5,7 @@ import React, { CSSProperties } from "react";
 import NavigateSVG from "@/components/SVGComponents/NavigateSVG";
 import cn from "@/utils/cn";
 
-interface StyledLinkProps {
+interface StyledLinkClientProps {
   className?: string;
   style?: CSSProperties;
   children: string;
@@ -13,14 +13,14 @@ interface StyledLinkProps {
   href: string;
   handleFocus: (newFocus: number, directionalSensitive: boolean) => void;
 }
-export default function StyledLink2({
+export default function StyledLinkClient({
   className,
   style,
   children,
   sNo,
   href,
   handleFocus,
-}: StyledLinkProps) {
+}: StyledLinkClientProps) {
   const [scope, animate] = useAnimate();
   const leadingZeroFormatter = new Intl.NumberFormat(undefined, {
     minimumIntegerDigits: 2,

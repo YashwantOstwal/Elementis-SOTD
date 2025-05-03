@@ -1,5 +1,5 @@
 import * as motion from "motion/react-client";
-export default function CrossIcon({ className }: { className?: string }) {
+export default function CloseIcon({ className }: { className?: string }) {
   return (
     <svg
       width="14"
