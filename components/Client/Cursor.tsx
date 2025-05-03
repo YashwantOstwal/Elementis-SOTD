@@ -1,7 +1,7 @@
 "use client";
 import cn from "@/utils/cn";
 import { AnimatePresence, motion, MotionStyle } from "motion/react";
-import { PropsWithChildren, useId } from "react";
+import { PropsWithChildren } from "react";
 interface CursorProps extends PropsWithChildren {
   renderCursor: boolean;
   style?: MotionStyle;
@@ -15,7 +15,6 @@ export default function Cursor({
   isMobile = false,
   ...rest
 }: CursorProps) {
-  const id = useId();
   const variants = {
     initial: { scale: 0 },
     animate: (custom: boolean) => ({
@@ -35,7 +34,6 @@ export default function Cursor({
       {renderCursor && (
         <motion.div
           {...rest}
-          key={id}
           initial="initial"
           animate="animate"
           exit="exit"
