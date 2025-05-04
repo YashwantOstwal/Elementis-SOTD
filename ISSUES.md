@@ -1,8 +1,8 @@
 Elementis Task queue:
 
-ParallaxContainer enhancement. violates expectation on 1200 x 800 window size
+ParallaxContainer enhancement. violates expectation on 1200 x 800 window size (dry run the algo and identify the bug)
 Core Web Vitals enhancement,
 Form server action to notion as db
-Cursor Entry and Exit bug. fix could be with safeToRemove() asynchronous animation or with same Id can be the solution?
+Cursor Entry and Exit bug. fix could be with safeToRemove() asynchronous animation or with same Id can be the solution? UPDATE: FIXED
 Cursor must not be displayed in Innovation Section in Mobile (<768)
 Navbar must have opacity 0 when scrolled up/down in innovation Section using Redux so the full page rerender is prevented

@@ -177,7 +177,7 @@ export default function ClipImageCard({
         <AnimatedMaskText
           state={currentState}
           lines={data[currentState - 1].title}
-          className="text-18 -space-y-1 text-center text-lg [line-height:1] font-light md:text-28"
+          className="-space-y-1 text-center text-lg [line-height:1] font-light md:text-28"
         />
 
         <div className="relative aspect-[1.62] w-full overflow-hidden md:aspect-[1.85]">
@@ -198,7 +198,7 @@ export default function ClipImageCard({
         <AnimatedMaskText
           state={currentState}
           lines={data[currentState - 1].description["desktop"]} //change this
-          className="text-center text-base [line-height:1.25] md:text-base"
+          className="text-center text-sm [line-height:1.25] md:text-base"
         />
       </motion.div>
       <span className="text-base [line-height:1] md:text-xl">
