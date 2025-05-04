@@ -53,6 +53,7 @@ body {
   --text-2xs: calc(12 * var(--multiplier));
   --text-xs: calc(13 * var(--multiplier));
   --text-sm: calc(14 * var(--multiplier));
+  --text-md: calc(15 * var(--multiplier));
   --text-base: calc(16 * var(--multiplier));
   --text-lg: calc(18 * var(--multiplier));
   --text-xl: calc(20 * var(--multiplier));
